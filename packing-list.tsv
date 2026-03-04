@@ -1,0 +1,194 @@
+Item	Person	Number	Category	Tags
+books for kids	kids	10	activities	essential
+airpods	emily	1	activities	workout
+airpods	ritchie	1	activities	workout
+headphones	kids	2	activities	long car rides
+yotos	kids	2	activities	long car rides
+activity books	kids	4	activities	long car rides
+books for grownups	grownups	2	activities	essential
+art supplies	kids	1	activities	long car rides
+edibles	all	1	activities	essential
+ipads	kids	2	activities	long car rides
+MPS bands	grownups	2	activities	workout
+vapes	all	1	activities	essential
+yoga blocks	all	2	activities	workout
+flipbelt	grownups	1	activities	workout
+running shoes	emily	1	shoes	workout
+running shoes	ritchie	1	shoes	workout
+yoga mats	all	2	activities	workout
+sun hat	emily	1	clothing	essential
+sun hat	ritchie	1	clothing	essential
+sun hat	roxy	1	clothing	essential
+sun hat	ada	1	clothing	essential
+bras	emily	1	clothing	essential
+warmest jacket	ritchie	1	clothing	cold weather, essential
+warmest jacket	roxy	1	clothing	cold weather, essential
+warmest jacket	ada	1	clothing	cold weather, essential
+warmest jacket	emily	1	clothing	cold weather, essential
+dresses	ada	2	clothing	essential
+dresses	roxy	2	clothing	essential
+fleece/sweater	ritchie	1	clothing	essential
+fleece/sweater	emily	1	clothing	essential
+fleece/sweater	roxy	1	clothing	essential
+fleece/sweater	ada	1	clothing	essential
+pajamas	emily	1	clothing	essential
+pants	ritchie	3	clothing	essential
+pants	emily	3	clothing	essential
+mid layer	ada	1	clothing	essential
+mid layer	emily	1	clothing	essential
+mid layer	ritchie	1	clothing	essential
+mid layer	roxy	1	clothing	essential
+long-sleeved base layer	ada	2	clothing	essential
+long-sleeved base layer	emily	2	clothing	essential
+long-sleeved base layer	ritchie	2	clothing	essential
+long-sleeved base layer	roxy	2	clothing	essential
+pajamas	ada	2	clothing	essential
+pajamas	roxy	2	clothing	essential
+pants	ada	3	clothing	essential
+pants	roxy	3	clothing	essential
+rain jacket	ada	1	clothing	rain
+rain jacket	roxy	1	clothing	rain
+rain jacket	emily	1	clothing	rain
+rain jacket	ritchie	1	clothing	rain
+short sleeves/tanks	ada	3	clothing	essential
+short sleeves/tanks	emily	3	clothing	essential
+short sleeves/tanks	ritchie	3	clothing	essential
+short sleeves/tanks	roxy	3	clothing	essential
+shorts	ada 	4	clothing	warm weather
+shorts	emily	2	clothing	warm weather
+shorts	ritchie	2	clothing	warm weather
+shorts	roxy	4	clothing	warm weather
+sleepy bra	emily	1	clothing	essential
+socks	emily	4	clothing	essential
+socks	ada	4	clothing	essential
+socks	ritchie	4	clothing	essential
+socks	roxy	4	clothing	essential
+swimsuit	ada	2	clothing	swim
+swimsuit	emily	2	clothing	swim
+swimsuit	ritchie	2	clothing	swim
+swimsuit	roxy	2	clothing	swim
+goggles	ada	1	activities	swim
+goggles	roxy	1	activities	swim
+undies	ada 	6	clothing	essential
+undies	emily	5	clothing	essential
+undies	roxy	5	clothing	essential
+undies	ritchie	4	clothing	essential
+warm hat	ada	1	clothing	cold weather, essential
+warm hat	emily	1	clothing	cold weather, essential
+warm hat	ritchie	1	clothing	cold weather, essential
+warm hat	roxy	1	clothing	cold weather, essential
+white hiking shirt	emily	1	clothing	hiking, warm weather
+salt & pepper	all	1	food	van gear, essential
+bug spray	all	1	gear	van gear, essential
+camping blanket	all	2	gear	van gear, essential
+camping chairs	all	2	gear	essential
+double sleeping bag	all	1	gear	van gear, essential
+expeds	all	2	gear	tent camping
+firewood	all	1	gear	essential
+front mat	all	1	gear	essential
+hammock + straps	all	1	gear	essential
+head lamps	all	4	gear	van gear, essential
+hiking daypack	emily	1	gear	hiking
+hiking daypack	ada	1	gear	hiking
+hiking daypack	roxy	1	gear	hiking
+hiking daypack	ritchie	1	gear	hiking
+hydration bladder	ritchie	1	gear	hiking
+hydration bladder	emily	1	gear	hiking
+hydration bladder	roxy	1	gear	hiking
+hydration bladder	ada	1	gear	hiking
+hot water bottles 	all	4	gear	cold weather
+kids sleeping bags	kids	2	gear	essential
+lanterns/string lights	all	1	gear	essential, gray box
+pillows	all	4	gear	essential
+propane	all	1	gear	essential
+stove	all	1	gear	essential
+tablecloth	all	1	gear	esssential, gray box
+tent	all	1	gear	tent camping
+bowls	all	4	kitchen	essential, van gear
+coffee pourer	all	1	kitchen	essential, van gear
+cutting board	all	1	kitchen	essential
+dish towels	all	8	Kitchen	essential
+knife	all	1	kitchen	essential, van gear
+ladel	all	1	kitchen	essential
+large kettle	all	1	kitchen	essential, van gear
+marshmallow sticks	all	2	kitchen	essential, gray box
+paper towel	all	1	kitchen	essential, van gear
+plastic spatula	all	1	kitchen	essential, van gear
+plates	all	7	kitchen	essential, van gear
+pot	all	1	kitchen	essential, van gear
+silverware	all	1	kitchen	essential, van gear
+skillet	all	1	kitchen	essential, van gear
+sponge	all	1	kitchen	essential, van gear
+tongs	all	1	kitchen	essential, van gear
+v60 + filters	all	1	kitchen	essential, van gear
+wine key	all	1	kitchen	essential, van gear
+yetis	all	4	kitchen	essential, van gear
+cuddlies	ada	1	personal	essential
+cuddlies	roxy	1	personal	essential
+earplugs	emily	3	personal	essential
+hyena	emily	1	personal	essential
+journal	emily	1	personal	essential
+journal	Ritchie	1	personal	essential
+sunglasses	emily	1	personal	essential
+sunglasses	ritchie	1	personal	essential
+water bottle	ada	1	personal	essential
+water bottle	emily	1	personal	essential
+water bottle	ritchie	1	personal	essential
+water bottle	roxy	1	personal	essential
+hiking shoes	emily	1	shoes	hiking, essential
+hiking shoes	ritchie	1	shoes	hiking, essential
+sandals	ritchie	1	shoes	warm weather
+sandals	ada	1	shoes	warm weather
+crocs	emily	1	shoes	warm weather
+crocs	roxy	1	shoes	warm weather
+hiking shoes	ada	1	shoes	hiking, essential
+hiking shoes	roxy	1	shoes	hiking, essential
+teva slippers	emily	1	shoes	essential
+teva slippers	ritchie	1	shoes	essential
+benadryl	all	1	medicine/first aid	essential
+adult toothpaste	all	1	toiletries	van gear
+advil	all	1	medicine/first aid	essential
+aquaphor	girls	1	toiletries	van gear
+body lotion	all	1	toiletries	van gear
+brush	girls	1	toiletries	van gear
+children's benadryl	girls	1	medicine/first aid	essential
+children's tylenol	girls	1	medicine/first aid	essential
+children's zyrtex	girls	1	medicine/first aid	essential
+conditioning spray	girls	1	toiletries	van gear
+dr. bronners	all	1	toiletries	van gear
+eyedrops	all	1	medicine/first aid	van gear
+face lotion	emily	1	toiletries	essential
+face sunscreen	emily	1	toiletries	essential
+face wash	emily	1	toiletries	essential
+first aid kit (with tweezers!)	all	1	medicine/first aid	van gear
+floss	all	1	toiletries	van gear
+hairbands	girls	1	toiletries	van gear
+kids toothpaste	all	1	toiletries	van gear
+makeup	emily	1	toiletries	essential
+medication 	emily	1	medicine/first aid	essential
+medication 	Ritchie	1	medicine/first aid	essential
+sunscreen	all	1	toiletries	van gear
+Technu	all	1	medicine/first aid	van gear
+toothbrushes	all	4	toiletries	van gear
+washcloths	all	5	toiletries	van gear
+wipes	all	1	toiletries	essential
+shampoo/conditioner	all	1	toiletries	van gear
+waterproof shoes/boots	ada	1	shoes	rain
+waterproof shoes/boots	roxy	1	shoes	rain
+waterproof shoes/boots	emily	1	shoes	rain
+waterproof shoes/boots	ritchie	1	shoes	rain
+white hiking shirt	ritchie	1	clothing	warm weather, hiking
+white hiking shirt	roxy	1	clothing	warm weather, hiking
+white hiking shirt	ada	1	clothing	warm weather, hiking
+neck lights	all	4	activities	essential
+charging cords	all	4	activities	essential
+tampons and pads	emily	1	toiletries	essential, van gear
+rain pants	emily	1	clothing	rain
+rain pants	ritchie	1	clothing	rain
+rain pants	roxy	1	clothing	rain
+rain pants	ada	1	clothing	rain
+gloves	ritchie	1	clothing	cold weather
+gloves	roxy	1	clothing	cold weather
+gloves	ada	1	clothing	cold weather
+gloves	emily	1	clothing	cold weather
+tupperware for lunches	all	4	kitchen	essential, hiking
