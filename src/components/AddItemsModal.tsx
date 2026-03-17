@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
-import type { Item, Tag } from '../types.ts'
-import { TAGS } from '../types.ts'
+import type { Item, Tag, FamilyMember } from '../types.ts'
+import { TAGS, FAMILY_MEMBERS } from '../types.ts'
 import { useItems } from '../lib/hooks.ts'
 
 interface AddItemsModalProps {
@@ -13,6 +13,7 @@ export default function AddItemsModal({ existingItemIds, onAddItem, onClose }: A
   const { items, loading } = useItems()
   const [search, setSearch] = useState('')
   const [tagFilter, setTagFilter] = useState<Tag | null>(null)
+  const [assigneeFilter, setAssigneeFilter] = useState<FamilyMember | null>(null)
   const [selectedItems, setSelectedItems] = useState<Set<string>>(new Set())
   const [isAdding, setIsAdding] = useState(false)
 
@@ -21,9 +22,24 @@ export default function AddItemsModal({ existingItemIds, onAddItem, onClose }: A
       if (existingItemIds.has(item.id)) return false
       if (search && !item.name.toLowerCase().includes(search.toLowerCase())) return false
       if (tagFilter && !item.tags.includes(tagFilter)) return false
+      if (assigneeFilter && item.assignee !== assigneeFilter) return false
       return true
     })
-  }, [items, existingItemIds, search, tagFilter])
+  }, [items, existingItemIds, search, tagFilter, assigneeFilter])
+
+  const allFilteredSelected = availableItems.length > 0 && availableItems.every(item => selectedItems.has(item.id))
+
+  const selectAllFiltered = () => {
+    setSelectedItems(prev => {
+      const next = new Set(prev)
+      if (allFilteredSelected) {
+        availableItems.forEach(item => next.delete(item.id))
+      } else {
+        availableItems.forEach(item => next.add(item.id))
+      }
+      return next
+    })
+  }
 
   const toggleItem = (id: string) => {
     setSelectedItems(prev => {
@@ -77,9 +93,34 @@ export default function AddItemsModal({ existingItemIds, onAddItem, onClose }: A
               </button>
             )}
           </div>
+
+          <p className="text-sm text-slate-400 mb-3 mt-4">Filter by assignee:</p>
+          <div className="flex flex-wrap gap-2">
+            {FAMILY_MEMBERS.map(member => (
+              <button
+                key={member}
+                onClick={() => setAssigneeFilter(assigneeFilter === member ? null : member)}
+                className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
+                  assigneeFilter === member
+                    ? 'bg-blue-600 border-blue-500 text-white'
+                    : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'
+                }`}
+              >
+                {member}
+              </button>
+            ))}
+            {assigneeFilter && (
+              <button
+                onClick={() => setAssigneeFilter(null)}
+                className="text-xs text-blue-400 hover:text-blue-300 px-2"
+              >
+                Clear
+              </button>
+            )}
+          </div>
         </div>
 
-        {/* Search */}
+        {/* Search + Select All */}
         <div className="px-6 py-4 border-b border-slate-800">
           <input
             type="text"
@@ -88,6 +129,14 @@ export default function AddItemsModal({ existingItemIds, onAddItem, onClose }: A
             placeholder="Search items..."
             className="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
+          {availableItems.length > 0 && (
+            <button
+              onClick={selectAllFiltered}
+              className="mt-2 text-sm text-blue-400 hover:text-blue-300"
+            >
+              {allFilteredSelected ? 'Deselect all' : 'Select all'} ({availableItems.length} item{availableItems.length !== 1 ? 's' : ''})
+            </button>
+          )}
         </div>
 
         {/* Item list */}
@@ -119,6 +168,11 @@ export default function AddItemsModal({ existingItemIds, onAddItem, onClose }: A
                       <span className="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-400 capitalize">
                         {item.category}
                       </span>
+                      {item.assignee && (
+                        <span className="text-xs px-2 py-0.5 rounded bg-emerald-900/50 text-emerald-400">
+                          {item.assignee}
+                        </span>
+                      )}
                       {item.tags.map(tag => (
                         <span key={tag} className="text-xs px-2 py-0.5 rounded bg-blue-900/50 text-blue-400">
                           {tag}

@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { useActiveTrip, usePackingList } from '../lib/hooks.ts'
+import { useActiveTrip, usePackingList, useItems } from '../lib/hooks.ts'
 import PackingList from '../components/PackingList.tsx'
 import AddItemsModal from '../components/AddItemsModal.tsx'
+import ItemForm from '../components/ItemForm.tsx'
 import TripForm from '../components/TripForm.tsx'
 
 function formatDate(dateStr: string) {
@@ -16,7 +17,9 @@ function formatDate(dateStr: string) {
 export default function CurrentTripPage() {
   const { trip, loading: tripLoading, createTrip, archiveTrip } = useActiveTrip()
   const { items, loading: listLoading, packItem, unpackItem, addItem, removeItem } = usePackingList(trip?.id ?? null)
+  const { createItem } = useItems()
   const [showAddItems, setShowAddItems] = useState(false)
+  const [showNewItem, setShowNewItem] = useState(false)
   const [isArchiving, setIsArchiving] = useState(false)
 
   const handleArchive = async () => {
@@ -73,6 +76,12 @@ export default function CurrentTripPage() {
             Add Items
           </button>
           <button
+            onClick={() => setShowNewItem(true)}
+            className="px-4 py-2 bg-emerald-600 text-white text-sm font-medium rounded-lg hover:bg-emerald-500 transition-colors"
+          >
+            New Item
+          </button>
+          <button
             onClick={handleArchive}
             disabled={isArchiving}
             className="px-4 py-2 bg-slate-800 text-slate-300 text-sm font-medium rounded-lg hover:bg-slate-700 transition-colors disabled:opacity-50"
@@ -99,6 +108,17 @@ export default function CurrentTripPage() {
           existingItemIds={existingItemIds}
           onAddItem={addItem}
           onClose={() => setShowAddItems(false)}
+        />
+      )}
+
+      {showNewItem && (
+        <ItemForm
+          onSubmit={async (data) => {
+            const newItem = await createItem(data)
+            if (newItem) await addItem(newItem)
+            setShowNewItem(false)
+          }}
+          onCancel={() => setShowNewItem(false)}
         />
       )}
     </div>
